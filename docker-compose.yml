@@ -1,9 +1,0 @@
-version: "3.8"
-services:
-  proxy:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      - QUEUE_MAXSIZE=200
-      - SIM_UPSTREAM=1
