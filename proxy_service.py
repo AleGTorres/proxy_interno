@@ -1,4 +1,3 @@
-# proxy_service.py
 """
 Proxy interno — versão final para submissão (RF1 + Missões 1-3).
 - Enfileira requisições, envia ordenadamente para /score do upstream.

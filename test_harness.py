@@ -1,4 +1,3 @@
-# test_harness.py (corrigido)
 import asyncio
 import time
 import httpx
