@@ -28,16 +28,16 @@ from prometheus_client import Counter, Histogram, Gauge, generate_latest, CONTEN
 
 UPSTREAM_BASE = os.getenv("UPSTREAM_BASE", "https://score.hsborges.dev")
 QUEUE_MAXSIZE = int(os.getenv("QUEUE_MAXSIZE", "200"))
-RATE_BASE_INTERVAL = float(os.getenv("RATE_BASE_INTERVAL", "1.0"))  # 1 req/s
+RATE_BASE_INTERVAL = float(os.getenv("RATE_BASE_INTERVAL", "1.0"))
 REQUEST_TIMEOUT = float(os.getenv("REQUEST_TIMEOUT", "15.0"))
-SIM_UPSTREAM = os.getenv("SIM_UPSTREAM", "1") == "1"  # default: simulate
+SIM_UPSTREAM = os.getenv("SIM_UPSTREAM", "1") == "1"
 CACHE_DB = os.getenv("CACHE_DB", "proxy_cache.db")
-CACHE_TTL = int(os.getenv("CACHE_TTL", "300"))  # seconds
+CACHE_TTL = int(os.getenv("CACHE_TTL", "300"))
 CB_FAIL_THRESHOLD = int(os.getenv("CB_FAIL_THRESHOLD", "5"))
 CB_OPEN_SECONDS = int(os.getenv("CB_OPEN_SECONDS", "10"))
 MAX_RETRIES = int(os.getenv("MAX_RETRIES", "2"))
-BACKOFF_BASE = float(os.getenv("BACKOFF_BASE", "0.5"))  # seconds
-QUEUE_EVICT_LOWEST = True  # policy: when full, evict lowest-priority
+BACKOFF_BASE = float(os.getenv("BACKOFF_BASE", "0.5"))
+QUEUE_EVICT_LOWEST = True 
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("proxy_final")
